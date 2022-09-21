@@ -1,4 +1,3 @@
-import { useSpotifyContext } from "../context";
 import { Buffer } from "buffer";
 
 const TOKEN_ENDPOINT = "https://accounts.spotify.com/api/token";
@@ -10,8 +9,6 @@ const CLIENT_SECRET = process.env.REACT_APP_SPOTIFY_CLIENT_SECRET;
 const REFRESH_TOKEN = process.env.REACT_APP_SPOTIFY_REFRESH_TOKEN;
 
 export const useSpotifyApi = () => {
-  const { recentlyPlayedItem, setRecentlyPlayedItem } = useSpotifyContext();
-
   const getAccessToken = async () => {
     const basic = Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString(
         "base64"
@@ -39,12 +36,10 @@ export const useSpotifyApi = () => {
       }),
       data = await response.json();
 
-    setRecentlyPlayedItem(data.items[0].track.name);
+    return data;
   };
 
   return {
-    recentlyPlayedItem,
-    setRecentlyPlayedItem,
     getRecentlyPlayed,
   };
 };
