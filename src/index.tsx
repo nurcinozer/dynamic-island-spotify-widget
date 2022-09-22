@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { SpotifyContextProvider } from "./context";
-import { App } from "./App";
+import { SpotifyIsland } from "./SpotifyIsland";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <SpotifyContextProvider>
-      <App />
+      <SpotifyIsland />
     </SpotifyContextProvider>
   </React.StrictMode>
 );

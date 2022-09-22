@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
 
-type SpotifyIslandType = "DEFAULT" | "EXPANDED";
+export type SpotifyIslandType = "DEFAULT" | "EXPANDED";
 
 type RecentlyPlayedItem = {
   track: {
@@ -10,7 +10,7 @@ type RecentlyPlayedItem = {
         {
           url: string;
         }
-      ]
+      ];
     };
     artists: [
       {
@@ -28,6 +28,8 @@ type SpotifyContextType = {
   setRecentlyPlayedItem: (item: RecentlyPlayedItem) => void;
   spotifyIslandType: SpotifyIslandType;
   setSpotifyIslandType: (type: SpotifyIslandType) => void;
+  color: string;
+  setColor: (color: string) => void;
 };
 
 const DEFAULT_SPOTIFY_CONTEXT: SpotifyContextType = {
@@ -54,6 +56,8 @@ const DEFAULT_SPOTIFY_CONTEXT: SpotifyContextType = {
   setRecentlyPlayedItem: () => {},
   spotifyIslandType: "DEFAULT",
   setSpotifyIslandType: () => {},
+  color: "#fff",
+  setColor: () => {},
 };
 
 const SpotifyContext = createContext<SpotifyContextType>(
@@ -67,11 +71,11 @@ interface SpotifyContextProviderProps {
 export const SpotifyContextProvider: React.FC<SpotifyContextProviderProps> = ({
   children,
 }) => {
-  const [recentlyPlayedItem, setRecentlyPlayedItem] = useState<
-    RecentlyPlayedItem
-  >(DEFAULT_SPOTIFY_CONTEXT.recentlyPlayedItem);
+  const [recentlyPlayedItem, setRecentlyPlayedItem] =
+    useState<RecentlyPlayedItem>(DEFAULT_SPOTIFY_CONTEXT.recentlyPlayedItem);
   const [spotifyIslandType, setSpotifyIslandType] =
     useState<SpotifyIslandType>("DEFAULT");
+  const [color, setColor] = useState<string>("#fff");
 
   return (
     <SpotifyContext.Provider
@@ -80,6 +84,8 @@ export const SpotifyContextProvider: React.FC<SpotifyContextProviderProps> = ({
         setRecentlyPlayedItem,
         spotifyIslandType,
         setSpotifyIslandType,
+        color,
+        setColor,
       }}
     >
       {children}
