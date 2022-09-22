@@ -2,8 +2,7 @@
 
 Dynamic island style widget for displaying what you're recently played on Spotify.
 
-<video src='https://user-images.githubusercontent.com/20209512/191861635-5684f733-02b0-44b9-b7db-720950c6cae6.mov' width="480"/>
-
+https://user-images.githubusercontent.com/20209512/191861635-5684f733-02b0-44b9-b7db-720950c6cae6.mov
 
 ## 1. Get Spotify Token
 
