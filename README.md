@@ -6,7 +6,7 @@ https://user-images.githubusercontent.com/20209512/191861635-5684f733-02b0-44b9-
 
 ## 1. Get Spotify Token
 
-- Create a new app in Spotify Developer Dashboard
+- Create a new app in [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/)
 - Get your client ID and client secret from that app
 - Authorize with your client ID and scopes (e.g. user-read-recently-played)
 - Copy your code from the URL
@@ -14,7 +14,7 @@ https://user-images.githubusercontent.com/20209512/191861635-5684f733-02b0-44b9-
 
 ## 2. Environment Variables
 
-Use the template .env.example.
+Use the template `.env.example.`
 
 To sync with your account, you'll need three things from Spotify Developer:
 
