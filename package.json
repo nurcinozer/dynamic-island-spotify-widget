@@ -11,6 +11,8 @@
     "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
     "buffer": "^6.0.3",
+    "fast-average-color": "^9.1.1",
+    "framer-motion": "^7.3.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
