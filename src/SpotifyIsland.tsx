@@ -83,7 +83,7 @@ export const SpotifyIsland: React.FC<SpotifyIslandProps> = ({
   }
 
   return (
-    <div className={`absolute ${positionClass}`}>
+    <div className={`fixed ${positionClass}`}>
       <motion.div
         className={`flex justify-center items-center bg-black cursor-pointer ${
           spotifyIslandType === "DEFAULT" ? "rounded-54-px" : "rounded-42-px"
