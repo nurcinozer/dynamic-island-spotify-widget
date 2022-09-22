@@ -1,11 +1,13 @@
 import { SpotifyContextProvider } from "../context";
-import { SpotifyIsland } from "./SpotifyIsland";
+import { SpotifyIsland, SpotifyIslandProps } from "./SpotifyIsland";
 import "../styles/index.css";
 
-export const SpotifyWidget: React.FC = () => {
+export const SpotifyWidget: React.FC<SpotifyIslandProps> = ({
+  position = "default",
+}) => {
   return (
     <SpotifyContextProvider>
-      <SpotifyIsland />
+      <SpotifyIsland position={position} />
     </SpotifyContextProvider>
   );
 };

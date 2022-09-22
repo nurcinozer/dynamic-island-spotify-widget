@@ -7,7 +7,7 @@ import { DefaultSection, ExpandedSection } from "../components";
 
 const fac = new FastAverageColor();
 
-type SpotifyIslandProps = {
+export type SpotifyIslandProps = {
   position?:
     | "top-left"
     | "top-right"
