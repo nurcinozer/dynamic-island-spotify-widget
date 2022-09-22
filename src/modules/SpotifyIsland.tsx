@@ -1,9 +1,9 @@
 import { useCallback, useMemo, useState } from "react";
-import { useSpotifyContext } from "./context";
-import { useSpotifyApi } from "./hooks";
+import { useSpotifyContext } from "../context";
+import { useSpotifyApi } from "../hooks";
 import { motion } from "framer-motion";
 import { FastAverageColor } from "fast-average-color";
-import { DefaultSection, ExpandedSection } from "./components";
+import { DefaultSection, ExpandedSection } from "../components";
 
 const fac = new FastAverageColor();
 
