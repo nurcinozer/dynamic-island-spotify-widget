@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { useSpotifyContext } from "../context";
 import { useSpotifyApi } from "../hooks";
 import { motion } from "framer-motion";

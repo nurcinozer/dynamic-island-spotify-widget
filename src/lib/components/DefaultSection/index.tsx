@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { useSpotifyContext } from "../../context";
 import { PlayingAnimation } from "../PlayingAnimation";

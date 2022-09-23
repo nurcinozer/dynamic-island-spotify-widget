@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { useSpotifyContext } from "../../context";
 import { PlayingAnimation } from "../PlayingAnimation";
@@ -30,7 +31,7 @@ export const ExpandedSection: React.FC = () => {
               {recentlyPlayedItem.track.name}
             </a>
           </p>
-          <p className="text-darkgray">
+          <p className="text-darkgray w-fit">
             {recentlyPlayedItem.track.artists[0].name}
           </p>
         </div>

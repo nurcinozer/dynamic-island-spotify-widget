@@ -1,10 +1,22 @@
 /** @type {import('tailwindcss').Config} */
+const { join } = require("path");
+
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    join(__dirname, "src", "**", "*.tsx", "*.ts", "*.jsx", "*.js"),
+    join(
+      __dirname,
+      "./node_modules/spotify-island/src/**/*.tsx",
+      "./node_modules/spotify-island/src/**/*.ts",
+      "./node_modules/spotify-island/src/**/*.jsx",
+      "./node_modules/spotify-island/src/**/*.js"
+    ),
+  ],
   theme: {
     extend: {
       colors: {
-        darkgray: '#8E8E93'
+        darkgray: "#8E8E93",
       },
       scale: {
         "04": ".4",
@@ -40,9 +52,9 @@ module.exports = {
         },
       },
       animation: {
-        'quiet': 'quiet 1.2s ease-in-out infinite',
-        'normal': 'normal 1.2s ease-in-out infinite',
-        'loud': 'loud 1.2s ease-in-out infinite',
+        quiet: "quiet 1.2s ease-in-out infinite",
+        normal: "normal 1.2s ease-in-out infinite",
+        loud: "loud 1.2s ease-in-out infinite",
       },
     },
   },

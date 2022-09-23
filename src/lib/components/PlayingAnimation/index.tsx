@@ -1,3 +1,4 @@
+import React from "react";
 type PlayingAnimationProps = {
   color?: string;
 };

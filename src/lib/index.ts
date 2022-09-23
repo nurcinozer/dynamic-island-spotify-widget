@@ -1,3 +1,3 @@
-import { SpotifyWidget } from "./modules/SpotifyWidget";
+import SpotifyWidget from "./modules/SpotifyWidget";
 
 export { SpotifyWidget };

@@ -1,8 +1,19 @@
 {
-  "name": "dynamic-island-spotify-widget",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
+  "name": "spotify-island",
+  "version": "1.1.7",
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "files": [
+    "build"
+  ],
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@emotion/is-prop-valid": "^1.2.0",
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^14.1.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -10,42 +21,31 @@
     "@types/node": "^16.11.59",
     "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
+    "autoprefixer": "^10.4.12",
     "buffer": "^6.0.3",
     "fast-average-color": "^9.1.1",
     "framer-motion": "^7.3.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "postcss": "^8.4.16",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
     "react-scripts": "5.0.1",
+    "rollup": "^2.79.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-polyfill-node": "^0.10.2",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.34.0",
+    "tailwindcss": "^3.1.8",
     "typescript": "^4.8.3",
     "web-vitals": "^2.1.4"
   },
+  "dependencies": {
+    "typescript": "^4.8.3",
+    "@emotion/is-prop-valid": "^1.2.0",
+    "tailwindcss": "^3.1.8",
+    "fast-average-color": "^9.1.1"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.12",
-    "postcss": "^8.4.16",
-    "tailwindcss": "^3.1.8"
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
   }
 }
