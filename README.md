@@ -22,6 +22,25 @@ To sync with your account, you'll need three things from Spotify Developer:
 - Client secret
 - Refresh token
 
+If you are going to use Spotify Island in your Nextjs project you also need to create `next.config.js` file for adding environment variables like this:
+
+```
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  env: {
+    REACT_APP_SPOTIFY_CLIENT_ID: process.env.REACT_APP_SPOTIFY_CLIENT_ID,
+    REACT_APP_SPOTIFY_CLIENT_SECRET:
+      process.env.REACT_APP_SPOTIFY_CLIENT_SECRET,
+    REACT_APP_SPOTIFY_REFRESH_TOKEN:
+      process.env.REACT_APP_SPOTIFY_REFRESH_TOKEN,
+  },
+};
+
+module.exports = nextConfig;
+```
+
 ## 3. Props
 
 | key       | type                                                                               | default   |
