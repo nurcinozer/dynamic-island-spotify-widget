@@ -52,3 +52,9 @@ module.exports = nextConfig;
 | key       | type                                                                               | default   |
 |-----------|------------------------------------------------------------------------------------|-----------|
 | position? | "top-left", "top-right", "bottom-left", "bottom-right", "bottom-center", "default" | "default" |
+
+### Todo
+- [ ] Fix `unhandledRejection: Error: FastAverageColor: resource as string is not supported in this environment`
+
+#### Note
+> Do not hesitate to open an <a href="https://github.com/nurcinozer/dynamic-island-spotify-widget/issues" target="_blank">issue</a> for your questions and feedbacks.
