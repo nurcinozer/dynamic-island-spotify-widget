@@ -43,7 +43,11 @@ const nextConfig = {
 module.exports = nextConfig;
 ```
 
-## 3. Props
+## 3. Installation
+
+`npm install spotify-island`
+
+## 4. Props
 
 | key       | type                                                                               | default   |
 |-----------|------------------------------------------------------------------------------------|-----------|
